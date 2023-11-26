@@ -50,10 +50,10 @@ resource "aws_default_security_group" "securitygroup" {
 
 resource "aws_instance" "ec2instance" {
   instance_type = "t3.xlarge"
+  # centos ami us-east-2 region below
   ami           = "ami-01ba94b5a83adcb35"
+  # rhel ami us-east-2 region below
   # ami = "ami-029d17ae8507c9b4a"
-  # subnet_id = aws_subnet.instance.id
-  # security_groups = [aws_security_group.securitygroup.id]
   key_name                = aws_key_pair.ssh.key_name
   disable_api_termination = false
   ebs_optimized           = false
