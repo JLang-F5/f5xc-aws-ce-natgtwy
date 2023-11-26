@@ -41,15 +41,15 @@ variable "sitetoken" {
 }
 
 variable "SecurityServiceInsideCIDRAZ1" {
-  type = string
+  type        = string
   description = "Subnet for inside interface of F5XC CE virtual appliances"
-  default = "10.0.10.0/24"
+  default     = "10.0.10.0/24"
 }
 
 variable "SecurityServiceOutsideCIDRAZ1" {
-  type = string
+  type        = string
   description = "Subnet for inside interface of F5XC CE virtual appliances"
-  default = "10.0.110.0/24"
+  default     = "10.0.110.0/24"
 }
 
 variable "az1" {

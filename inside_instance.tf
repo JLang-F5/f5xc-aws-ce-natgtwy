@@ -14,12 +14,12 @@ resource "tls_private_key" "ssh" {
 }
 
 resource "aws_key_pair" "ssh" {
-  key_name = "ce1"
+  key_name   = "ce1"
   public_key = tls_private_key.ssh.public_key_openssh
 }
 
 output "ssh_private_key_pem" {
-  value = tls_private_key.ssh.private_key_pem
+  value     = tls_private_key.ssh.private_key_pem
   sensitive = true
 }
 
@@ -31,16 +31,16 @@ resource "aws_default_security_group" "securitygroup" {
   vpc_id = aws_vpc.vpc.id
   ingress {
     description = "Permit All Traffic"
-    from_port = 0
-    to_port = 0
-    protocol = "-1"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
   egress {
     description = "Permit all egress traffic"
-    from_port = 0
-    to_port = 0
-    protocol = "-1"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
@@ -50,13 +50,13 @@ resource "aws_default_security_group" "securitygroup" {
 
 resource "aws_instance" "ec2instance" {
   instance_type = "t3.xlarge"
-  ami = "ami-01ba94b5a83adcb35"
+  ami           = "ami-01ba94b5a83adcb35"
   # ami = "ami-029d17ae8507c9b4a"
   # subnet_id = aws_subnet.instance.id
   # security_groups = [aws_security_group.securitygroup.id]
-  key_name = aws_key_pair.ssh.key_name
+  key_name                = aws_key_pair.ssh.key_name
   disable_api_termination = false
-  ebs_optimized = false
+  ebs_optimized           = false
   root_block_device {
     volume_size = "80"
     volume_type = "gp3"
@@ -85,14 +85,14 @@ resource "aws_instance" "ec2instance" {
 }
 
 resource "aws_subnet" "securityServicesSubnetInsideAZ1" {
-  vpc_id = aws_vpc.vpc.id
-  cidr_block = var.SecurityServiceInsideCIDRAZ1
+  vpc_id            = aws_vpc.vpc.id
+  cidr_block        = var.SecurityServiceInsideCIDRAZ1
   availability_zone = local.az1
 }
 
 resource "aws_subnet" "securityServicesSubnetOutsideAZ1" {
-  vpc_id = aws_vpc.vpc.id
-  cidr_block = var.SecurityServiceOutsideCIDRAZ1
+  vpc_id            = aws_vpc.vpc.id
+  cidr_block        = var.SecurityServiceOutsideCIDRAZ1
   availability_zone = local.az1
 }
 

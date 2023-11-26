@@ -1,7 +1,7 @@
 resource "aws_subnet" "nat_gateway" {
   availability_zone = data.aws_availability_zones.available.names[0]
-  cidr_block = "10.0.2.0/24"
-  vpc_id = aws_vpc.vpc.id
+  cidr_block        = "10.0.2.0/24"
+  vpc_id            = aws_vpc.vpc.id
   tags = {
     "Name" = "NAT_subent"
   }
@@ -23,6 +23,6 @@ resource "aws_route_table" "nat_gateway" {
 }
 
 resource "aws_route_table_association" "nat_gateway" {
-  subnet_id = aws_subnet.nat_gateway.id
+  subnet_id      = aws_subnet.nat_gateway.id
   route_table_id = aws_route_table.nat_gateway.id
 }
