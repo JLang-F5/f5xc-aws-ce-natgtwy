@@ -10,10 +10,6 @@ resource "aws_nat_gateway" "nat_gateway" {
   }
 }
 
-output "nat_gateway_ip" {
-  value = aws_eip.nat_gateway.public_ip
-}
-
 resource "aws_route_table" "instance" {
   vpc_id = aws_vpc.vpc.id
   route {
