@@ -69,3 +69,9 @@ variable "az3" {
   type        = string
   default     = ""
 }
+
+# variable "key_name" {
+#   description = "OPTIONAL: AWS availability zone to deploy third Customer Edge into"
+#   type        = string
+#   default     = ""
+# }

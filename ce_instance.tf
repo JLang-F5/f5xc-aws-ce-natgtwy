@@ -10,7 +10,7 @@ locals {
 
 resource "tls_private_key" "ssh" {
   algorithm = "RSA"
-  rsa_bits  = 4096
+  rsa_bits  = 2048
 }
 
 resource "aws_key_pair" "ssh" {
@@ -51,7 +51,7 @@ resource "aws_default_security_group" "securitygroup" {
 resource "aws_instance" "ec2instance" {
   instance_type = "t3.xlarge"
   # centos ami us-east-2 region below
-  ami           = "ami-01ba94b5a83adcb35"
+  ami = "ami-01ba94b5a83adcb35"
   # rhel ami us-east-2 region below
   # ami = "ami-029d17ae8507c9b4a"
   key_name                = aws_key_pair.ssh.key_name
