@@ -19,7 +19,6 @@ resource "aws_route_table" "instance" {
 }
 
 resource "aws_route_table_association" "instance" {
-  #   subnet_id = aws_subnet.instance.id 
   subnet_id      = aws_subnet.securityServicesSubnetOutsideAZ1.id
   route_table_id = aws_route_table.instance.id
 }

@@ -1,12 +1,16 @@
-output "ssh_private_key_pem" {
-  value     = tls_private_key.ssh.private_key_pem
-  sensitive = true
-}
-
-output "ssh_public_key_pem" {
-  value = tls_private_key.ssh.public_key_pem
-}
-
 output "nat_gateway_ip" {
   value = aws_eip.nat_gateway.public_ip
+}
+
+output "aws_subnet" {
+  value = aws_subnet.securityServicesSubnetOutsideAZ1.id
+}
+
+
+output "aws_vpc" {
+  value = aws_vpc.vpc.id
+}
+
+output "aws_default_security_group" {
+  value = aws_default_security_group.securitygroup.id
 }

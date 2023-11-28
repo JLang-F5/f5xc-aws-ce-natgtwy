@@ -52,6 +52,13 @@ variable "SecurityServiceOutsideCIDRAZ1" {
   default     = "10.0.110.0/24"
 }
 
+variable "SecurityServiceWorkloadCIDRAZ1" {
+  type        = string
+  description = "Subnet for inside interface of F5XC CE virtual appliances"
+  default     = "10.0.127.0/24"
+}
+
+
 variable "az1" {
   description = "OPTIONAL: AWS availability zone to deploy first Customer Edge into"
   type        = string
