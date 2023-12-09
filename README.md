@@ -1,5 +1,4 @@
 # f5xc-aws-ce-natgtwy
-# f5xcs-multi-az-appstack-aws
 
 This is a non-official F5 repository.  This repo is not supported by F5 or DevCentral!
 
