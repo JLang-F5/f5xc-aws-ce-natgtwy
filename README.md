@@ -6,7 +6,7 @@ This repo will provide a solution for deploying F5 XC Secure Mesh via a NAT Gate
 
 # Distributed Cloud AWS Secure Mesh via NaGateway Deployment
 
-The goal of this solution is to provide the infrastructure for a working demo to deploy F5 Distributed Cloud Secure Mesh in AWS wihtout a CE EIP and through a NAT Gateway.
+The goal of this solution is to provide the infrastructure for a working demo to deploy F5 Distributed Cloud Secure Mesh CE in AWS wihtout a CE-EIP and through a NAT Gateway.
 <!--TOC-->
 
 - [F5 Distributed Cloud AWS Secure Mesh Nat Gateway Deployment](#f5-distribued-cloud-aws-secure-mesh-nat-gateway-deployment)
