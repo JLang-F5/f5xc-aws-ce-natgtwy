@@ -29,13 +29,14 @@ The goal of this solution is to provide the infrastructure for a working demo to
 - Steps to deploy using this repo:
     - Apply
         - In aws_infra directory fill out variables or terrafomr.tfvars file
-        - From aws_infra directory run (first time only run - terraform init) then terraform plan then terraform apply
+        - From aws_infra directory run (first time only - terraform init) then terraform plan then terraform apply
         - Get all relevant info for XC Site build (natgateway-ID, subnet-ID's, vpc-id, security-group-id, etc...)
         - Change directories to xc_site
         - Export p12 file and password export VES_P12_PASSWORD=password export VOLT_API_P12_FILE=path/to/p12/file
         - Update variables or .tfvars file
         - Add aws cloud credentials to Distributed Cloud tenant 
             -  - [F5 Distributed Cloud AWS Pre-reqs](https://docs.cloud.f5.com/docs/reference/cloud-cred-ref/aws-vpc-cred-ref)
+        - From xc_site directory run (first time only - terraform init) then terraform plan then terraform apply
     - Destroy
         - From xc_site directory 
         - run terraform destroy
