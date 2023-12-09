@@ -35,6 +35,15 @@ The goal of this solution is to provide the infrastructure for a working demo to
         - Change directories to xc_site
         - Export p12 file and password export VES_P12_PASSWORD=password export VOLT_API_P12_FILE=path/to/p12/file
         - Update variables or .tfvars file
+        - Add aws cloud credentials to Distributed Cloud tenant 
+            -  - [F5 Distributed Cloud AWS Pre-reqs](https://docs.cloud.f5.com/docs/reference/cloud-cred-ref/aws-vpc-cred-ref)
+    - Destroy
+        - From xc_site directory 
+        - run terraform destroy
+        - validate from xc console the Secure Mesh site was destroyed go into AWS VPC Site and Delete the site 
+        - change directories to aws_infra
+        - run terraform destroy
+        - Validate from the aws console all aws resources have been destroyed
 
 ## Topology
 - High Level Topology 
