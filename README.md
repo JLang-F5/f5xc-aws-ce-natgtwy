@@ -28,7 +28,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
 
 - Steps to deploy using this repo:
     - Apply
-        - In aws_infra direcotry fill out variables or terrafomr.tfvars file
+        - In aws_infra directory fill out variables or terrafomr.tfvars file
         - From aws_infra directory run (first time only run - terraform init) then terraform plan then terraform apply
         - Get all relevant info for XC Site build (natgateway-ID, subnet-ID's, vpc-id, security-group-id, etc...)
         - Change directories to xc_site
