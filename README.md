@@ -30,7 +30,14 @@ The goal of this solution is to provide the infrastructure for a working demo to
     - Apply
         - In aws_infra directory fill out variables or terrafomr.tfvars file
         - Run (first time only - terraform init) then terraform plan.  Validate the output if it is what is expected then run terraform apply
-        - Get all relevant info for XC Site build (natgateway-ID, subnet-ID's, vpc-id, security-group-id, etc...)
+        - Get all relevant info for XC Site build 
+            - natgateway-ID
+            - subnet-ID's
+                - Inside (SLI)
+                - OutSide (SLO)
+                - Workload
+            - vpc-id
+            - security-group-id
         - Change directories to xc_site
         - Export p12 file and password 
             - export VES_P12_PASSWORD=password 
