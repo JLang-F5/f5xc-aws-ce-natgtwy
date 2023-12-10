@@ -75,6 +75,7 @@ terraform init
 terraform fmt
 terraform plan
 terraform apply --auto-approve
+terraform destroy --auto-approve
 ```
 
 <!-- For auto deployment you can do with the deploy.sh and destroy.sh scripts.
