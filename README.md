@@ -32,7 +32,9 @@ The goal of this solution is to provide the infrastructure for a working demo to
         - Run (first time only - terraform init) then terraform plan.  Validate the output if it is what is expected then run terraform apply
         - Get all relevant info for XC Site build (natgateway-ID, subnet-ID's, vpc-id, security-group-id, etc...)
         - Change directories to xc_site
-        - Export p12 file and password export VES_P12_PASSWORD=password export VOLT_API_P12_FILE=path/to/p12/file
+        - Export p12 file and password 
+            - export VES_P12_PASSWORD=password 
+            - export VOLT_API_P12_FILE=path/to/p12/file
         - Update variables or .tfvars file
         - Add aws cloud credentials to Distributed Cloud tenant 
             -  - [F5 Distributed Cloud AWS Pre-reqs](https://docs.cloud.f5.com/docs/reference/cloud-cred-ref/aws-vpc-cred-ref)
