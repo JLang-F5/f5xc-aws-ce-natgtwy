@@ -76,12 +76,12 @@ terraform plan
 terraform apply --auto-approve
 ```
 
-For auto deployment you can do with the deploy.sh and destroy.sh scripts.
+<!-- For auto deployment you can do with the deploy.sh and destroy.sh scripts.
 
 ```bash
 ./deploy
 ./destroy
-```
+``` -->
 
 ## Troubleshooting
 
