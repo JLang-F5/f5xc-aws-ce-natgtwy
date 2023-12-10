@@ -58,7 +58,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
 | <a name="requirement_google"></a> [aws](#requirement\_aws) | ~> 4.0 |
 | <a name="requirement_http"></a> [http](#requirement\_http) | 2.1.1 |
-| <a name="requirement_volterrarm"></a> [volterrarm](#requirement\_volterrarm) | 0.11.6 |
+| <a name="requirement_volterrarm"></a> [volterrarm](#requirement\_volterrarm) | 0.11.28 |
 
 ## Inputs
 
