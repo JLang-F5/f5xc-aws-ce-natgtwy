@@ -31,8 +31,8 @@ The goal of this solution is to provide the infrastructure for a working demo to
         - In aws_infra directory fill out variables or terrafomr.tfvars file
         - Run (first time only - terraform init) then terraform plan.  Validate the output if it is what is expected then run terraform apply
         - Get all relevant info for XC Site build 
-            - natgateway-ID
-            - subnet-ID's
+            - natgateway-id
+            - subnet-id's
                 - Inside (SLI)
                 - OutSide (SLO)
                 - Workload
