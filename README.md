@@ -36,7 +36,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
         - Update variables or .tfvars file
         - Add aws cloud credentials to Distributed Cloud tenant 
             -  - [F5 Distributed Cloud AWS Pre-reqs](https://docs.cloud.f5.com/docs/reference/cloud-cred-ref/aws-vpc-cred-ref)
-            -  - [F5 Distributed Cloud Upload Cloud Credentials] (https://docs.cloud.f5.com/docs/how-to/site-management/cloud-credentials)
+            -  - [F5 Distributed Cloud Upload AWS Cloud Credentials](https://docs.cloud.f5.com/docs/how-to/site-management/cloud-credentials)
         - Run (first time only - terraform init) then terraform plan.  Validate the output if it is what is expected then run terraform apply
     - Destroy
         - From xc_site directory 
