@@ -12,10 +12,10 @@ resource "aws_nat_gateway" "nat_gateway" {
 
 resource "aws_route_table" "instance" {
   vpc_id = aws_vpc.vpc.id
-  route {
-    cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = aws_nat_gateway.nat_gateway.id
-  }
+  # route {
+  #   cidr_block     = "0.0.0.0/0"
+  #   nat_gateway_id = aws_nat_gateway.nat_gateway.id
+  # }
 }
 
 resource "aws_route_table_association" "instance" {
