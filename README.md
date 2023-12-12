@@ -10,6 +10,10 @@ The goal of this solution is to provide the infrastructure for a working demo to
 <!--TOC-->
 
 - [F5 Distributed Cloud AWS Secure Mesh Nat Gateway Deployment](#f5-distribued-cloud-aws-secure-mesh-nat-gateway-deployment)
+  - [Prerequisites](#prerequisites)
+  - [F5 Distributed Cloud Configuration(s)](#f5-distributed-cloud-configurations)
+  - [API Certificate](#api-certificate)
+  - [Terraform](#terraform)
   - [To do](#to-do)
   - [High Level Topology](#topology)
   - [Requirements](#requirements)
@@ -23,6 +27,55 @@ The goal of this solution is to provide the infrastructure for a working demo to
   - [F5 Networks Contributor License Agreement](#f5-networks-contributor-license-agreement)
 
 <!--TOC-->
+## Prerequisites
+- A Distributed Cloud Services Account.
+
+## F5 Distributed Cloud Configuration(s)
+
+Within F5 Distributed Cloud (F5XC), you will need to create yourself an API Certificate.  We will be be using the [F5 XCS Terraform Provider](https://registry.terraform.io/providers/volterraedge/volterra/latest/docs).
+
+### API Certificate
+
+1. Log in to your F5 XC Console.
+2. In the upper right-hand corner, click the User Account Icon.
+3. Then click "Account Settings"
+
+![Screen Shot 2](/img/xcconsole.png)
+
+4. Click Add Credentials
+5. Enter a Credential Name
+6. Verify that Credential Type is set to 'API Certificate'
+7. Set a password
+8. Set an Expiration date
+9. Download your Key Pair
+
+![Screen Shot 3](/img/credentials.png)
+
+## Terraform
+
+> **_Credentials:_** Before we get to the Terraform variables, there is an example prep script provided, this CAN be used to map API Certificate and password to ENV Vars, but you can use whatever method you are comfortable with for secrets.
+
+```bash
+export VOLT_API_P12_FILE=/creds/api-creds.p12
+export VES_P12_PASSWORD=12345678
+```
+
+Run the script to map creds.
+
+```bash
+. ./prep.sh
+```
+Alternatively, you may extract the SSL certificate and key into separate files for use, vs using environment variables.
+
+Extract Private Key
+```bash
+openssl pkcs12 -in <F5XC-tenant>.console.ves.volterra.io.api-creds.p12 -legacy -nodes -nocerts -out f5xc-api.key
+```
+
+Extract Certificate
+```bash
+openssl pkcs12 -in f5-sa.console.ves.volterra.io.api-creds.p12 -legacy -nodes -out f5xc-api.cer
+```
 
 ## To do
 

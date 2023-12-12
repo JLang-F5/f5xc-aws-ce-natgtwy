@@ -1,0 +1,3 @@
+[submodule "vsphere_infra"]
+	path = vsphere_infra
+	url = git@github.com:JLang-F5/f5xc-vsphere-terraform.git
