@@ -28,8 +28,9 @@ The goal of this solution is to provide the infrastructure for a working demo to
 
 - Steps to deploy using this repo:
     - Apply
-        - In aws_infra directory fill out variables or terrafomr.tfvars file
-            - Run (first time only - terraform init) then terraform plan.  Validate the output if it is what is expected then run terraform apply
+        - In aws_infra directory, make a copy of the 'terraform.tfvars.example' file and save it as terraform.tfvars
+        - Update variables within terraform.tfvars file to match your environment
+            - Run (first time only - terraform init) then terraform plan.  Validate the output is what you expected, then run terraform apply
             - Get all relevant info for XC Site build 
                 - natgateway-id
                 - subnet-id's
@@ -42,18 +43,19 @@ The goal of this solution is to provide the infrastructure for a working demo to
             - Export p12 file and password 
                 - export VES_P12_PASSWORD=password 
                 - export VOLT_API_P12_FILE=path/to/p12/file
-            - Update variables or .tfvars file
+            - Make a copy of the 'terraform.tfvars.example' file and save it as terraform.tfvars
+            - Update variables.tf or terraform.tfvars file
             - Add aws cloud credentials to Distributed Cloud tenant 
                 -  - [F5 Distributed Cloud AWS Pre-reqs](https://docs.cloud.f5.com/docs/reference/cloud-cred-ref/aws-vpc-cred-ref)
                 -  - [F5 Distributed Cloud Upload AWS Cloud Credentials](https://docs.cloud.f5.com/docs/how-to/site-management/cloud-credentials)
             - Run (first time only - terraform init) then terraform plan.  Validate the output if it is what is expected then run terraform apply
-    - Destroy
+    - Destroy / Clean Up
         - From xc_site directory 
             - run terraform destroy
-            - validate from xc console the Secure Mesh site was destroyed go into AWS VPC Site and Delete the site 
-        - change directories to aws_infra
+            - Validate from XC console the Secure Mesh site was destroyed go into AWS VPC Site and Delete the site 
+        - Change directories to aws_infra
             - run terraform destroy
-            - Validate from the aws console all aws resources have been destroyed
+            - Validate from the AWS console all AWS resources have been destroyed
 
 ## Topology
 - High Level Topology 
