@@ -74,7 +74,7 @@ openssl pkcs12 -in <F5XC-tenant>.console.ves.volterra.io.api-creds.p12 -legacy -
 
 Extract Certificate
 ```bash
-openssl pkcs12 -in f5-sa.console.ves.volterra.io.api-creds.p12 -legacy -nodes -out f5xc-api.cer
+openssl pkcs12 -in <F5XC-tenant>.console.ves.volterra.io.api-creds.p12 -legacy -nodes -out f5xc-api.cer
 ```
 
 ## To do
