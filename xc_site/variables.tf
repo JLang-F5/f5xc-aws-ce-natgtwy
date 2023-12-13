@@ -50,7 +50,6 @@ variable "SecurityServiceWorkloadCIDRAZ1" {
   default     = "10.0.127.0/24"
 }
 
-
 variable "az1" {
   description = "OPTIONAL: AWS availability zone to deploy first Customer Edge into"
   type        = string
