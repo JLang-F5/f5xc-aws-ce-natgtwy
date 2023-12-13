@@ -1,11 +1,7 @@
-
-output "aws_nat_gw" {
-  value = aws_subnet.nat_gateway.id
+output "aws_nat_gateway" {
+  value = aws_nat_gateway.nat_gateway.id
 }
 
-# output "aws_nat_gateway" {
-#   value = aws_nat_gateway.nat_gateway
-# }
 
 output "nat_gateway_ip" {
   value = aws_eip.nat_gateway.public_ip
