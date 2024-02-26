@@ -11,9 +11,9 @@ output "aws_vpc" {
   value = aws_vpc.vpc.id
 }
 
-output "aws_subnet" {
-  value = aws_subnet.securityServicesSubnetOutsideAZ1.id
-}
+# output "aws_subnet" {
+#   value = aws_subnet.securityServicesSubnetOutsideAZ1.id
+# }
 
 output "SecurityServiceInsideCIDRAZ1" {
   value = aws_subnet.securityServicesSubnetInsideAZ1.id
